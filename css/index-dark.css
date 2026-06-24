@@ -1,4 +1,4 @@
-/* Amped AV — dark theme (index.html prototype only) */
+/* Amped AV — dark theme (site-wide) */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 body.theme-dark {
@@ -291,6 +291,89 @@ body.theme-dark .footer-tagline {
 
 body.theme-dark .footer-tagline span {
   color: var(--electric);
+}
+
+/* Inner pages */
+body.theme-dark .page-hero {
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+body.theme-dark .page-hero p {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .breadcrumb {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .breadcrumb a {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .breadcrumb a:hover {
+  color: var(--electric-bright);
+}
+
+body.theme-dark .section p,
+body.theme-dark .contact-info li {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .contact-info strong {
+  color: #fff;
+}
+
+body.theme-dark form label {
+  color: var(--silver);
+}
+
+body.theme-dark form input,
+body.theme-dark form select,
+body.theme-dark form textarea {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--silver);
+}
+
+body.theme-dark form input:focus,
+body.theme-dark form select:focus,
+body.theme-dark form textarea:focus {
+  outline: none;
+  border-color: var(--electric);
+  box-shadow: 0 0 0 3px var(--electric-dim);
+}
+
+body.theme-dark .faq-group h2 {
+  color: var(--electric-bright);
+  border-bottom-color: var(--electric-dim);
+}
+
+body.theme-dark .faq-item {
+  border-bottom-color: var(--border);
+}
+
+body.theme-dark .faq-item p {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .placeholder-note {
+  background: rgba(26, 156, 255, 0.1);
+  border-color: var(--border-glow);
+  color: var(--electric-bright);
+}
+
+body.theme-dark .footer-grid a {
+  color: var(--silver-muted);
+}
+
+body.theme-dark .footer-grid a:hover {
+  color: #fff;
+}
+
+body.theme-dark .footer-bottom {
+  border-top-color: var(--border);
+  color: var(--silver-muted);
 }
 
 body.theme-dark .service-card[style*="teal-bg"],
