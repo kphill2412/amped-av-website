@@ -50,10 +50,17 @@ body.theme-dark .site-header {
 
 body.theme-dark .logo-img {
   display: block;
-  height: 48px;
+  height: 52px;
   width: auto;
-  max-width: min(280px, 52vw);
+  max-width: min(300px, 55vw);
   object-fit: contain;
+}
+
+body.theme-dark a.logo {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  padding: 4px 0;
 }
 
 body.theme-dark .logo-text { display: none; }
@@ -200,6 +207,18 @@ body.theme-dark .service-card {
 
 body.theme-dark .service-card .icon {
   filter: drop-shadow(0 0 8px var(--electric-glow));
+}
+
+body.theme-dark a.all-services-link {
+  border-color: var(--border);
+  color: var(--silver-muted);
+  background: transparent;
+}
+
+body.theme-dark a.all-services-link:hover {
+  background: var(--electric-dim);
+  border-color: var(--electric);
+  color: var(--electric-bright);
 }
 
 body.theme-dark .text-link {
@@ -379,12 +398,6 @@ body.theme-dark .footer-grid a:hover {
 body.theme-dark .footer-bottom {
   border-top-color: var(--border);
   color: var(--silver-muted);
-}
-
-body.theme-dark .service-card[style*="teal-bg"],
-body.theme-dark a.service-card:last-child {
-  background: var(--electric-dim) !important;
-  border-color: var(--electric) !important;
 }
 
 body.theme-dark .nav-toggle {
