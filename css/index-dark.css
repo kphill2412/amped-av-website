@@ -46,21 +46,28 @@ body.theme-dark .site-header {
   background: rgba(5, 5, 5, 0.92);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 1px 0 var(--border-glow);
+  overflow: visible;
+}
+
+body.theme-dark .site-header .inner {
+  padding: 1.125rem 0;
 }
 
 body.theme-dark .logo-img {
   display: block;
-  height: 52px;
+  height: 58px;
   width: auto;
-  max-width: min(300px, 55vw);
+  max-width: min(320px, 58vw);
   object-fit: contain;
+  object-position: left center;
 }
 
 body.theme-dark a.logo {
   display: flex;
   align-items: center;
   line-height: 0;
-  padding: 4px 0;
+  padding: 6px 0;
+  overflow: visible;
 }
 
 body.theme-dark .logo-text { display: none; }
