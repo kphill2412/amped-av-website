@@ -50,8 +50,10 @@ body.theme-dark .site-header {
 
 body.theme-dark .logo-img {
   display: block;
-  height: 52px;
+  height: 48px;
   width: auto;
+  max-width: min(280px, 52vw);
+  object-fit: contain;
 }
 
 body.theme-dark .logo-text { display: none; }
@@ -129,15 +131,23 @@ body.theme-dark .hero-logo-wrap {
   }
 }
 
-/* Buttons */
-body.theme-dark .btn-primary {
-  background: linear-gradient(135deg, #1a9cff 0%, #0066b3 100%);
-  box-shadow: 0 4px 24px var(--electric-glow);
+/* Buttons — match header Contact CTA */
+body.theme-dark .btn-primary,
+body.theme-dark a.btn-primary,
+body.theme-dark button.btn-primary {
+  background: linear-gradient(135deg, #1a9cff 0%, #0077cc 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px var(--electric-glow);
+  border: none;
 }
 
-body.theme-dark .btn-primary:hover {
-  background: linear-gradient(135deg, #4db8ff 0%, #1a9cff 100%);
-  box-shadow: 0 6px 32px var(--electric-glow);
+body.theme-dark .btn-primary:hover,
+body.theme-dark a.btn-primary:hover,
+body.theme-dark button.btn-primary:hover {
+  background: linear-gradient(135deg, #4db8ff 0%, #1a9cff 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 0 28px var(--electric-glow);
+  transform: translateY(-1px);
 }
 
 body.theme-dark .btn-outline {
@@ -256,13 +266,8 @@ body.theme-dark .cta-band p {
   color: var(--silver-muted);
 }
 
-body.theme-dark .cta-band .btn-outline {
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #fff;
-}
-
-body.theme-dark .cta-band .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
+body.theme-dark .cta-band .btn-primary {
+  margin-top: 0.25rem;
 }
 
 /* Footer */
