@@ -26,8 +26,8 @@ Deploy. Analytics stays off until a real ID replaces the placeholder.
 | `contact_text_click` | Any `sms:` link clicked |
 | `contact_email_click` | Any `mailto:` link clicked |
 | `cta_click` | "Get a Free Estimate", header Contact, links to contact page |
-| `form_submit` | Contact form submitted |
-| `generate_lead` | Same as form submit (GA4 recommended event) |
+| `contact_form_submit` | Contact form submitted successfully (our event; ignore Enhanced Measurement `form_submit`) |
+| `generate_lead` | Same successful submit (GA4 recommended event — use for reporting) |
 
 Page views are tracked automatically.
 
@@ -52,4 +52,4 @@ Clicks measure *intent*; John's numbers measure *real inbounds*.
 
 ## 6. Formspree (when wired)
 
-Form submissions will also appear in the Formspree dashboard. Cross-check with GA4 `form_submit` counts.
+Form submissions will also appear in the Formspree dashboard. Cross-check with GA4 `contact_form_submit` or `generate_lead` counts (not Enhanced Measurement’s `form_submit`).

@@ -131,7 +131,7 @@
             .then(function (response) {
               if (response.ok) {
                 if (typeof window.gtag === 'function') {
-                  window.gtag('event', 'form_submit', {
+                  window.gtag('event', 'contact_form_submit', {
                     form_name: 'contact',
                     page_path: location.pathname,
                   });

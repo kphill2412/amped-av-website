@@ -87,5 +87,5 @@
     }
   });
 
-  /* form_submit / generate_lead fire from contact.html after a successful Formspree response */
+  /* contact_form_submit / generate_lead fire from contact.html after a successful Formspree response */
 })();
