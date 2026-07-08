@@ -73,14 +73,17 @@
       </ul>
       <div class="placeholder-note">TODO: Replace phone/email with real contact info.</div>
     </div>
-    <form id="contact-form" action="#" method="post">
+    <form id="contact-form" action="https://formspree.io/f/xvzjnjlv" method="POST">
       <h3 style="margin-bottom:1rem;">Send a message</h3>
+      <input type="hidden" name="_subject" value="New Amped AV estimate request" />
+      <input type="hidden" name="_next" value="https://amped-av-website.pages.dev/thank-you.html" />
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;height:0;width:0;opacity:0;" aria-hidden="true" />
       <label for="name">Name</label>
       <input id="name" name="name" type="text" required placeholder="Your name" />
       <label for="phone">Phone</label>
       <input id="phone" name="phone" type="tel" required placeholder="(727) 555-0000" />
       <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="you@email.com" />
+      <input id="email" name="email" type="email" required placeholder="you@email.com" />
       <label for="city">City</label>
       <input id="city" name="city" type="text" placeholder="Dunedin" />
       <label for="service">Project type</label>
@@ -95,9 +98,9 @@
         <option>Not sure yet</option>
       </select>
       <label for="message">Tell us about your project</label>
-      <textarea id="message" name="message" placeholder="Room, TV size, goals, timeline…"></textarea>
+      <textarea id="message" name="message" required placeholder="Room, TV size, goals, timeline…"></textarea>
       <button type="submit" class="btn btn-primary">Send message</button>
-      <p style="font-size:.85rem;color:var(--slate);margin-top:.75rem;">Form is a prototype — connect to Formspree, Netlify Forms, or similar at launch.</p>
+      <p style="font-size:.85rem;color:var(--slate);margin-top:.75rem;">We'll reply by phone or email — usually the same day.</p>
     </form>
   </div>
 </section>
