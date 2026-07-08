@@ -83,7 +83,7 @@
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required placeholder="Your name" />
         <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" required placeholder="(727) 555-0000" />
+        <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" required placeholder="(727) 555-0000" maxlength="14" />
         <label for="email">Email</label>
         <input id="email" name="email" type="email" required placeholder="you@email.com" />
         <label for="city">City</label>
@@ -114,6 +114,34 @@
         var errorEl = document.getElementById('form-error');
         var fieldsEl = document.getElementById('form-fields');
         var submitBtn = document.getElementById('form-submit-btn');
+        var phoneInput = document.getElementById('phone');
+
+        function formatPhone(value) {
+          var digits = String(value || '').replace(/\D/g, '').slice(0, 10);
+          if (digits.length === 0) return '';
+          if (digits.length < 4) return '(' + digits;
+          if (digits.length < 7) {
+            return '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+          }
+          return (
+            '(' +
+            digits.slice(0, 3) +
+            ') ' +
+            digits.slice(3, 6) +
+            '-' +
+            digits.slice(6)
+          );
+        }
+
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function () {
+            var formatted = formatPhone(phoneInput.value);
+            phoneInput.value = formatted;
+          });
+          phoneInput.addEventListener('blur', function () {
+            phoneInput.value = formatPhone(phoneInput.value);
+          });
+        }
 
         form.addEventListener('submit', function (event) {
           event.preventDefault();
