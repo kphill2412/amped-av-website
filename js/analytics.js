@@ -87,16 +87,5 @@
     }
   });
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var form =
-      document.getElementById('contact-form') ||
-      document.querySelector('form[action*="formspree"]');
-
-    if (!form) return;
-
-    form.addEventListener('submit', function () {
-      track('form_submit', { form_name: 'contact' });
-      track('generate_lead', { form_name: 'contact' });
-    });
-  });
+  /* form_submit / generate_lead fire from contact.html after a successful Formspree response */
 })();

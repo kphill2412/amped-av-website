@@ -394,6 +394,18 @@ body.theme-dark .placeholder-note {
   color: var(--electric-bright);
 }
 
+body.theme-dark .form-status-success {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(52, 211, 153, 0.45);
+  color: #a7f3d0;
+}
+
+body.theme-dark .form-status-error {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(248, 113, 113, 0.4);
+  color: #fecaca;
+}
+
 body.theme-dark .footer-grid a {
   color: var(--silver-muted);
 }
