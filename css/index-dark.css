@@ -50,14 +50,14 @@ body.theme-dark .site-header {
 }
 
 body.theme-dark .site-header .inner {
-  padding: 1.125rem 0;
+  padding: 0.85rem 0;
 }
 
 body.theme-dark .logo-img {
   display: block;
-  height: 58px;
+  height: 96px;
   width: auto;
-  max-width: min(320px, 58vw);
+  max-width: min(420px, 72vw);
   object-fit: contain;
   object-position: left center;
 }
@@ -66,7 +66,7 @@ body.theme-dark a.logo {
   display: flex;
   align-items: center;
   line-height: 0;
-  padding: 6px 0;
+  padding: 4px 0;
   overflow: visible;
 }
 
@@ -303,9 +303,9 @@ body.theme-dark .site-footer {
 }
 
 body.theme-dark .footer-logo {
-  height: 72px;
+  height: 110px;
   width: auto;
-  max-width: min(280px, 100%);
+  max-width: min(380px, 100%);
   margin-bottom: 0.75rem;
   object-fit: contain;
   object-position: left center;
