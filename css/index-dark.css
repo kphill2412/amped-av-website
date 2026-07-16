@@ -303,9 +303,12 @@ body.theme-dark .site-footer {
 }
 
 body.theme-dark .footer-logo {
-  height: 100px;
+  height: 72px;
   width: auto;
-  margin-bottom: 1rem;
+  max-width: min(280px, 100%);
+  margin-bottom: 0.75rem;
+  object-fit: contain;
+  object-position: left center;
 }
 
 body.theme-dark .footer-text-logo {
@@ -313,11 +316,7 @@ body.theme-dark .footer-text-logo {
 }
 
 body.theme-dark .footer-tagline {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--silver-muted);
-  margin-top: 0.5rem;
+  display: none; /* included in logo lockup */
 }
 
 body.theme-dark .footer-tagline span {
