@@ -7,8 +7,17 @@
 (function () {
   var MEASUREMENT_ID = 'G-BPVYEWDEKY';
   var PLACEHOLDER = /X{4,}/i;
+  var ALLOWED_HOSTS = {
+    'amped-av.com': true,
+    'www.amped-av.com': true,
+  };
 
   if (!MEASUREMENT_ID || PLACEHOLDER.test(MEASUREMENT_ID)) {
+    return;
+  }
+
+  // Skip GA on staging (pages.dev) and any other non-production host
+  if (!ALLOWED_HOSTS[location.hostname]) {
     return;
   }
 
